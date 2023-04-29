@@ -284,9 +284,6 @@ async def final(message: types.Message, state: FSMContext):
     user_data = await state.get_data()
     user_data['id_user'] = message.from_user.id
 
-    with open('scraping/data_for_scraping.json', 'w') as file:
-        json.dump(user_data, file, indent=4, ensure_ascii=False)
-
     await message.answer(
         text=f'Сделано! Ваш выбор: \nМарка - {user_data["mark"]}\nМодель - {user_data["model"]}\n'
              f'Коробка - {user_data["transmission"]}\nМинимальный год - {user_data["year_min"]}\nМаксимальный год - {user_data["year_max"]}\n'
