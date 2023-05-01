@@ -1,6 +1,10 @@
 Bot AvtoBot is a bot for the Telegram messenger that helps you find the car on OtoMoto.com. 
 With its help, you can subscribe to updates that match your criteria and receive notifications about new ads.
 
+Link to bot - https://t.me/avtoAutoBot
+
+Link to a video with an example using the bot [![AvtoBot Youtube]](https://www.youtube.com/watch?v=Fcn1BJy_CS0)
+
 
 How the bot works from the user side:
 
