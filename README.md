@@ -17,7 +17,7 @@ How the bot works from the technical side
 
   - the program visits the link and saves the ID of the newest ad (this is needed so that the bot can send ads that were added after the user's request was created). The situation where there are no ads is also taken into account.
 
-  - then the program adds the following data to the database: user ID, ID of the newest ad, make, model, minimum year, maximum year, minimum mileage, maximum mileage, minimum price, maximum price, URL.
+  - then the program adds the following data to the database: user ID, ID of the newest ad, make, model, transmission type, minimum year, maximum year, minimum mileage, maximum mileage, minimum price, maximum price, URL.
 
   - every 3 minutes, the bot visits the users' links and sends new ads if any are found (in this case, the old ad ID is replaced with the ID of the newer ad).
 
