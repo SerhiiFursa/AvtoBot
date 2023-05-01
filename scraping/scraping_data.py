@@ -1,6 +1,7 @@
 import asyncio
 import requests
 from bs4 import BeautifulSoup
+from dotenv import load_dotenv
 
 from database.execute import update_id_ad
 from database.fetch import url_for_new_ad, read_data_for_old_users
@@ -20,7 +21,8 @@ async def scraping_first_ad(id_user: int):
         data = [id_user, int(id_first_ad['id'])]
         await update_id_ad(data)
     except Exception as e:
-        print(e)
+        load_dotenv()
+        await bot.send_message(chat_id=int(os.getenv("admin_id")), text=e)
 
     try:
         url = link.findChild("a")['href']
@@ -79,6 +81,7 @@ async def scraping_data():
                     break
 
         except Exception as e:
-            print(e)
+            load_dotenv()
+            await bot.send_message(chat_id=int(os.getenv("admin_id")), text=e)
 
         await asyncio.sleep(1)
