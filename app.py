@@ -1,9 +1,7 @@
 import asyncio
-import logging
 
 from check_time.check_time import run_scheduled_tasks
 from loader import dp, bot
-import handlers
 
 
 async def main():
@@ -14,5 +12,4 @@ async def main():
 
 
 if __name__ == '__main__':
-    logging.basicConfig(level=logging.INFO)
     asyncio.run(main())
